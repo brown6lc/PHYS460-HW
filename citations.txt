@@ -1,0 +1,11 @@
+---Q1.cpp---
+-used claude.ai to figure out the best return type for the data i was working with (vector<double>) and for help with formatting some of the output lines
+-for learning about the 1D/2D vector https://www.geeksforgeeks.org/cpp/2d-vector-in-cpp-with-user-defined-size/
+
+---plots.py---
+-used claude.ai for help with plotting multiple data in the same plot with pyplot (grouped bar chart)
+-pyplot documentation for problem 2 part b: https://matplotlib.org/stable/tutorials/pyplot.html
+-numpy piecewise documentation for problem 2 part b: https://numpy.org/doc/stable/reference/generated/numpy.piecewise.html
+-numpy linspace doc for problem 2 part b: https://numpy.org/doc/stable/reference/generated/numpy.linspace.html
+-to annotate maximum in problem 2 part b plot: https://stackoverflow.com/questions/43374920/how-to-automatically-annotate-maximum-value-in-pyplot
+-used claude.ai for syntax to plot the standard deviations in problem 3 part c plotProbDistribution, i did the calculations myself
