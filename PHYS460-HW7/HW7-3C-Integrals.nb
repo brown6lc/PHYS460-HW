@@ -1,0 +1,597 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     21047,        589]
+NotebookOptionsPosition[     19529,        558]
+NotebookOutlinePosition[     19928,        574]
+CellTagsIndexPosition[     19885,        571]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Clear", " ", "variables"}], "*)"}], 
+  RowBox[{
+   RowBox[{"Clear", "[", 
+    RowBox[{"a", ",", "h", ",", "n", ",", "p"}], "]"}], "\[IndentingNewLine]",
+    "\n", 
+   RowBox[{"(*", 
+    RowBox[{"Define", " ", "the", " ", "two", " ", "integrals"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"exprOdd", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"4", " ", "Pi", " ", "a", " ", 
+         RowBox[{"n", "^", "2"}]}], ")"}], "/", "h"}], "*", 
+      RowBox[{"Integrate", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"Cos", "[", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"p", " ", "a"}], ")"}], "/", 
+            RowBox[{"(", 
+             RowBox[{"2", " ", "h"}], ")"}]}], "]"}], "^", "2"}], "/", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"p", "/", "h"}], ")"}], "^", "2"}], "-", 
+            RowBox[{
+             RowBox[{"n", "^", "2"}], " ", 
+             RowBox[{"Pi", "^", "2"}]}]}], ")"}], "^", "2"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"p", ",", 
+          RowBox[{"-", "Infinity"}], ",", "Infinity"}], "}"}], ",", 
+        RowBox[{"Assumptions", "->", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"a", ">", "0"}], ",", 
+           RowBox[{"h", ">", "0"}], ",", 
+           RowBox[{"n", "\[Element]", "Integers"}]}], "}"}]}]}], "]"}]}]}], 
+    ";"}], "\n", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"exprEven", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"4", " ", "Pi", " ", "a", " ", 
+         RowBox[{"n", "^", "2"}]}], ")"}], "/", "h"}], "*", 
+      RowBox[{"Integrate", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"Sin", "[", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"p", " ", "a"}], ")"}], "/", 
+            RowBox[{"(", 
+             RowBox[{"2", " ", "h"}], ")"}]}], "]"}], "^", "2"}], "/", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"p", "/", "h"}], ")"}], "^", "2"}], "-", 
+            RowBox[{
+             RowBox[{"n", "^", "2"}], " ", 
+             RowBox[{"Pi", "^", "2"}]}]}], ")"}], "^", "2"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"p", ",", 
+          RowBox[{"-", "Infinity"}], ",", "Infinity"}], "}"}], ",", 
+        RowBox[{"Assumptions", "->", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"a", ">", "0"}], ",", 
+           RowBox[{"h", ">", "0"}], ",", 
+           RowBox[{"n", "\[Element]", "Integers"}]}], "}"}]}]}], "]"}]}]}], 
+    ";"}], "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", 
+    RowBox[{"Simplify", " ", "results"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"FullSimplify", "[", 
+    RowBox[{"exprOdd", ",", 
+     RowBox[{"Assumptions", "->", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"a", ">", "0"}], ",", 
+        RowBox[{"h", ">", "0"}], ",", 
+        RowBox[{"n", "\[Element]", "Integers"}]}], "}"}]}]}], "]"}], "\n", 
+   RowBox[{"FullSimplify", "[", 
+    RowBox[{"exprEven", ",", 
+     RowBox[{"Assumptions", "->", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"a", ">", "0"}], ",", 
+        RowBox[{"h", ">", "0"}], ",", 
+        RowBox[{"n", "\[Element]", "Integers"}]}], "}"}]}]}], 
+    "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.983802995017769*^9, 3.98380299501877*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"3f0e5b3d-f088-4b44-b8b6-807b1466500f"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Integrate", "idiv", 
+   "\"Integral of \\!\\(\\*FractionBox[SuperscriptBox[RowBox[{\\\"Cos\\\", \\\
+\"[\\\", FractionBox[RowBox[{\\\"a\\\", \\\" \\\", \\\"p\\\"}], RowBox[{\\\"2\
+\\\", \\\" \\\", \\\"h\\\"}]], \\\"]\\\"}], \\\"2\\\"], \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+FractionBox[SuperscriptBox[\\\"p\\\", \\\"2\\\"], SuperscriptBox[\\\"h\\\", \
+\\\"2\\\"]]}], \\\"+\\\", RowBox[{SuperscriptBox[\\\"n\\\", \\\"2\\\"], \\\" \
+\\\", SuperscriptBox[\\\"\[Pi]\\\", \\\"2\\\"]}]}], \\\")\\\"}], \
+\\\"2\\\"]]\\) does not converge on \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"\[Infinity]\\\"}], \\\",\\\", \
+\\\"\[Infinity]\\\"}], \\\"}\\\"}]\\).\"", 2, 2, 1, 22956655245049400992, 
+   "Local"},
+  "MessageTemplate",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.983803007988718*^9},
+ CellLabel->
+  "During evaluation of \
+In[1]:=",ExpressionUUID->"543679ed-0811-0048-9f70-98a1dafbae69"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Integrate", "idiv", 
+   "\"Integral of \\!\\(\\*FractionBox[SuperscriptBox[RowBox[{\\\"Sin\\\", \\\
+\"[\\\", FractionBox[RowBox[{\\\"a\\\", \\\" \\\", \\\"p\\\"}], RowBox[{\\\"2\
+\\\", \\\" \\\", \\\"h\\\"}]], \\\"]\\\"}], \\\"2\\\"], \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+FractionBox[SuperscriptBox[\\\"p\\\", \\\"2\\\"], SuperscriptBox[\\\"h\\\", \
+\\\"2\\\"]]}], \\\"+\\\", RowBox[{SuperscriptBox[\\\"n\\\", \\\"2\\\"], \\\" \
+\\\", SuperscriptBox[\\\"\[Pi]\\\", \\\"2\\\"]}]}], \\\")\\\"}], \
+\\\"2\\\"]]\\) does not converge on \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"\[Infinity]\\\"}], \\\",\\\", \
+\\\"\[Infinity]\\\"}], \\\"}\\\"}]\\).\"", 2, 3, 2, 22956655245049400992, 
+   "Local"},
+  "MessageTemplate",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.9838030133895454`*^9},
+ CellLabel->
+  "During evaluation of \
+In[1]:=",ExpressionUUID->"8e89cfba-ba67-d246-8bbd-fc1c7b336e08"],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"4", " ", "a", " ", 
+   SuperscriptBox["n", "2"], " ", "\[Pi]", " ", 
+   RowBox[{"Integrate", "[", 
+    RowBox[{
+     FractionBox[
+      SuperscriptBox[
+       RowBox[{"Cos", "[", 
+        FractionBox[
+         RowBox[{"a", " ", "p"}], 
+         RowBox[{"2", " ", "h"}]], "]"}], "2"], 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox[
+          SuperscriptBox["p", "2"], 
+          SuperscriptBox["h", "2"]], "-", 
+         RowBox[{
+          SuperscriptBox["n", "2"], " ", 
+          SuperscriptBox["\[Pi]", "2"]}]}], ")"}], "2"]], ",", 
+     RowBox[{"{", 
+      RowBox[{"p", ",", 
+       RowBox[{"-", "\[Infinity]"}], ",", "\[Infinity]"}], "}"}], ",", 
+     RowBox[{"Assumptions", "\[Rule]", 
+      RowBox[{
+       RowBox[{"n", "\[Element]", 
+        TemplateBox[{},
+         "Integers"]}], "&&", 
+       RowBox[{"a", ">", "0"}], "&&", 
+       RowBox[{"h", ">", "0"}]}]}]}], "]"}]}], "h"]], "Output",
+ CellChangeTimes->{3.983803037525898*^9},
+ CellLabel->"Out[4]=",ExpressionUUID->"6948322e-2151-0d42-a804-b89f05714e54"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ FractionBox[
+  RowBox[{"4", " ", "a", " ", 
+   SuperscriptBox["n", "2"], " ", "\[Pi]", " ", 
+   RowBox[{"Integrate", "[", 
+    RowBox[{
+     FractionBox[
+      SuperscriptBox[
+       RowBox[{"Sin", "[", 
+        FractionBox[
+         RowBox[{"a", " ", "p"}], 
+         RowBox[{"2", " ", "h"}]], "]"}], "2"], 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox[
+          SuperscriptBox["p", "2"], 
+          SuperscriptBox["h", "2"]], "-", 
+         RowBox[{
+          SuperscriptBox["n", "2"], " ", 
+          SuperscriptBox["\[Pi]", "2"]}]}], ")"}], "2"]], ",", 
+     RowBox[{"{", 
+      RowBox[{"p", ",", 
+       RowBox[{"-", "\[Infinity]"}], ",", "\[Infinity]"}], "}"}], ",", 
+     RowBox[{"Assumptions", "\[Rule]", 
+      RowBox[{
+       RowBox[{"n", "\[Element]", 
+        TemplateBox[{},
+         "Integers"]}], "&&", 
+       RowBox[{"a", ">", "0"}], "&&", 
+       RowBox[{"h", ">", "0"}]}]}]}], "]"}]}], "h"], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Clear", "[", 
+   RowBox[{"a", ",", "h", ",", "k", ",", "p"}], "]"}], "\n", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"Odd", " ", 
+     RowBox[{"case", ":", "n"}]}], "=", 
+    RowBox[{
+     RowBox[{"2", "k"}], "-", "1"}]}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"exprOdd", "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"4", " ", "Pi", " ", "a", " ", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"2", " ", "k"}], "-", "1"}], ")"}], "^", "2"}]}], ")"}], "/",
+       "h"}], "*", 
+     RowBox[{"Integrate", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"Cos", "[", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"p", " ", "a"}], ")"}], "/", 
+           RowBox[{"(", 
+            RowBox[{"2", " ", "h"}], ")"}]}], "]"}], "^", "2"}], "/", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"p", "/", "h"}], ")"}], "^", "2"}], "-", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"2", " ", "k"}], "-", "1"}], ")"}], "^", "2"}], " ", 
+            RowBox[{"Pi", "^", "2"}]}]}], ")"}], "^", "2"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"p", ",", 
+         RowBox[{"-", "Infinity"}], ",", "Infinity"}], "}"}], ",", 
+       RowBox[{"Assumptions", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"a", ">", "0"}], ",", 
+          RowBox[{"h", ">", "0"}], ",", 
+          RowBox[{"k", "\[Element]", "PositiveIntegers"}]}], "}"}]}]}], 
+      "]"}]}]}], ";"}], "\n", "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"Even", " ", 
+     RowBox[{"case", ":", "n"}]}], "=", 
+    RowBox[{"2", "k"}]}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"exprEven", "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"4", " ", "Pi", " ", "a", " ", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"2", " ", "k"}], ")"}], "^", "2"}]}], ")"}], "/", "h"}], "*", 
+     RowBox[{"Integrate", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"Sin", "[", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"p", " ", "a"}], ")"}], "/", 
+           RowBox[{"(", 
+            RowBox[{"2", " ", "h"}], ")"}]}], "]"}], "^", "2"}], "/", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"p", "/", "h"}], ")"}], "^", "2"}], "-", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"2", " ", "k"}], ")"}], "^", "2"}], " ", 
+            RowBox[{"Pi", "^", "2"}]}]}], ")"}], "^", "2"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"p", ",", 
+         RowBox[{"-", "Infinity"}], ",", "Infinity"}], "}"}], ",", 
+       RowBox[{"Assumptions", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"a", ">", "0"}], ",", 
+          RowBox[{"h", ">", "0"}], ",", 
+          RowBox[{"k", "\[Element]", "PositiveIntegers"}]}], "}"}]}]}], 
+      "]"}]}]}], ";"}], "\n", "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"Simplify", " ", "both"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{"FullSimplify", "[", 
+  RowBox[{"exprOdd", ",", 
+   RowBox[{"Assumptions", "->", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"a", ">", "0"}], ",", 
+      RowBox[{"h", ">", "0"}], ",", 
+      RowBox[{"k", "\[Element]", "PositiveIntegers"}]}], "}"}]}]}], "]"}], "\n", 
+ RowBox[{"FullSimplify", "[", 
+  RowBox[{"exprEven", ",", 
+   RowBox[{"Assumptions", "->", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"a", ">", "0"}], ",", 
+      RowBox[{"h", ">", "0"}], ",", 
+      RowBox[{"k", "\[Element]", "PositiveIntegers"}]}], "}"}]}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.9838031206364784`*^9, 3.983803121522995*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"acf6dd97-2d33-f74d-9745-99d21c61d6c9"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Integrate", "idiv", 
+   "\"Integral of \\!\\(\\*FractionBox[SuperscriptBox[RowBox[{\\\"Sin\\\", \\\
+\"[\\\", FractionBox[RowBox[{\\\"a\\\", \\\" \\\", \\\"p\\\"}], RowBox[{\\\"2\
+\\\", \\\" \\\", \\\"h\\\"}]], \\\"]\\\"}], \\\"2\\\"], \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"-\\\", \
+FractionBox[SuperscriptBox[\\\"p\\\", \\\"2\\\"], SuperscriptBox[\\\"h\\\", \
+\\\"2\\\"]]}], \\\"+\\\", RowBox[{SuperscriptBox[\\\"n\\\", \\\"2\\\"], \\\" \
+\\\", SuperscriptBox[\\\"\[Pi]\\\", \\\"2\\\"]}]}], \\\")\\\"}], \
+\\\"2\\\"]]\\) does not converge on \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"-\\\", \\\"\[Infinity]\\\"}], \\\",\\\", \
+\\\"\[Infinity]\\\"}], \\\"}\\\"}]\\).\"", 2, 6, 3, 22956655245049400992, 
+   "Local"},
+  "MessageTemplate",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.9838031262919636`*^9},
+ CellLabel->
+  "During evaluation of \
+In[6]:=",ExpressionUUID->"92dcef51-e310-de40-898b-ea8ca9136c80"],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"4", " ", "a", " ", 
+   SuperscriptBox["n", "2"], " ", "\[Pi]", " ", 
+   RowBox[{"Integrate", "[", 
+    RowBox[{
+     FractionBox[
+      SuperscriptBox[
+       RowBox[{"Sin", "[", 
+        FractionBox[
+         RowBox[{"a", " ", "p"}], 
+         RowBox[{"2", " ", "h"}]], "]"}], "2"], 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox[
+          SuperscriptBox["p", "2"], 
+          SuperscriptBox["h", "2"]], "-", 
+         RowBox[{
+          SuperscriptBox["n", "2"], " ", 
+          SuperscriptBox["\[Pi]", "2"]}]}], ")"}], "2"]], ",", 
+     RowBox[{"{", 
+      RowBox[{"p", ",", 
+       RowBox[{"-", "\[Infinity]"}], ",", "\[Infinity]"}], "}"}], ",", 
+     RowBox[{"Assumptions", "\[Rule]", 
+      RowBox[{
+       RowBox[{"n", "\[Element]", 
+        TemplateBox[{},
+         "Integers"]}], "&&", 
+       RowBox[{"a", ">", "0"}], "&&", 
+       RowBox[{"h", ">", "0"}]}]}]}], "]"}]}], "h"]], "Output",
+ CellChangeTimes->{3.983803126298477*^9},
+ CellLabel->"Out[6]=",ExpressionUUID->"7b9dd2a1-faec-de44-8071-8f5de611d5c3"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Integrate", "idiv", 
+   "\"Integral of \\!\\(\\*FractionBox[SuperscriptBox[RowBox[{\\\"Sin\\\", \\\
+\"[\\\", FractionBox[RowBox[{\\\"a\\\", \\\" \\\", \\\"p\\\"}], RowBox[{\\\"2\
+\\\", \\\" \\\", \\\"h\\\"}]], \\\"]\\\"}], \\\"2\\\"], \
+SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{FractionBox[SuperscriptBox[\\\"p\\\", \\\"2\\\"], \
+SuperscriptBox[\\\"h\\\", \\\"2\\\"]], \\\"-\\\", RowBox[{\\\"4\\\", \\\" \
+\\\", SuperscriptBox[\\\"k\\\", \\\"2\\\"], \\\" \\\", SuperscriptBox[\\\"\
+\[Pi]\\\", \\\"2\\\"]}]}], \\\")\\\"}], \\\"2\\\"]]\\) does not converge on \
+\\!\\(\\*RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"-\\\", \\\"\[Infinity]\\\"}], \
+\\\",\\\", \\\"\[Infinity]\\\"}], \\\"}\\\"}]\\).\"", 2, 9, 4, 
+   22956655245049400992, "Local"},
+  "MessageTemplate",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.9838031451392097`*^9},
+ CellLabel->
+  "During evaluation of \
+In[6]:=",ExpressionUUID->"7a891926-28f1-914b-a274-5b02719483f4"],
+
+Cell[BoxData[
+ RowBox[{"-", 
+  FractionBox[
+   RowBox[{"a", " ", 
+    RowBox[{"(", 
+     RowBox[{"\[ImaginaryI]", "+", 
+      RowBox[{
+       SuperscriptBox["\[ExponentialE]", 
+        RowBox[{"\[ImaginaryI]", " ", "a", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "1"}], "+", 
+           RowBox[{"2", " ", "k"}]}], ")"}], " ", "\[Pi]"}]], " ", 
+       RowBox[{"(", 
+        RowBox[{"\[ImaginaryI]", "+", 
+         RowBox[{"a", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "1"}], "+", 
+            RowBox[{"2", " ", "k"}]}], ")"}], " ", "\[Pi]"}]}], ")"}]}]}], 
+     ")"}]}], 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", 
+      RowBox[{"2", " ", "k"}]}], ")"}], " ", "\[Pi]"}]]}]], "Output",
+ CellChangeTimes->{3.9838031453801136`*^9},
+ CellLabel->"Out[10]=",ExpressionUUID->"7d0b1f78-2bc2-1446-b99c-a2d0f1b61b0a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"16", " ", "a", " ", 
+   SuperscriptBox["k", "2"], " ", "\[Pi]", " ", 
+   RowBox[{"Integrate", "[", 
+    RowBox[{
+     FractionBox[
+      SuperscriptBox[
+       RowBox[{"Sin", "[", 
+        FractionBox[
+         RowBox[{"a", " ", "p"}], 
+         RowBox[{"2", " ", "h"}]], "]"}], "2"], 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox[
+          SuperscriptBox["p", "2"], 
+          SuperscriptBox["h", "2"]], "-", 
+         RowBox[{"4", " ", 
+          SuperscriptBox["k", "2"], " ", 
+          SuperscriptBox["\[Pi]", "2"]}]}], ")"}], "2"]], ",", 
+     RowBox[{"{", 
+      RowBox[{"p", ",", 
+       RowBox[{"-", "\[Infinity]"}], ",", "\[Infinity]"}], "}"}], ",", 
+     RowBox[{"Assumptions", "\[Rule]", 
+      RowBox[{
+       RowBox[{"k", "\[Element]", 
+        TemplateBox[{},
+         "Integers"]}], "&&", 
+       RowBox[{"a", ">", "0"}], "&&", 
+       RowBox[{"h", ">", "0"}], "&&", 
+       RowBox[{"k", ">", "0"}]}]}]}], "]"}]}], "h"]], "Input",
+ CellChangeTimes->{3.983805393604851*^9},
+ CellLabel->"In[12]:=",ExpressionUUID->"7f8ccbba-9524-c54e-bfa6-b166c91bb0ed"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Integrate", "idiv", 
+   "\"Integral of \\!\\(\\*FractionBox[SuperscriptBox[RowBox[{\\\"Sin\\\", \\\
+\"[\\\", FractionBox[RowBox[{\\\"a\\\", \\\" \\\", \\\"p\\\"}], RowBox[{\\\"2\
+\\\", \\\" \\\", \\\"h\\\"}]], \\\"]\\\"}], \\\"2\\\"], \
+SuperscriptBox[RowBox[{\\\"(\\\", \
+RowBox[{FractionBox[SuperscriptBox[\\\"p\\\", \\\"2\\\"], \
+SuperscriptBox[\\\"h\\\", \\\"2\\\"]], \\\"-\\\", RowBox[{\\\"4\\\", \\\" \
+\\\", SuperscriptBox[\\\"k\\\", \\\"2\\\"], \\\" \\\", SuperscriptBox[\\\"\
+\[Pi]\\\", \\\"2\\\"]}]}], \\\")\\\"}], \\\"2\\\"]]\\) does not converge on \
+\\!\\(\\*RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"-\\\", \\\"\[Infinity]\\\"}], \
+\\\",\\\", \\\"\[Infinity]\\\"}], \\\"}\\\"}]\\).\"", 2, 12, 5, 
+   22956655245049400992, "Local"},
+  "MessageTemplate",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.9838053970637703`*^9},
+ CellLabel->
+  "During evaluation of \
+In[12]:=",ExpressionUUID->"6690a55b-a299-8c4d-95c9-bfa3b664a50c"],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"16", " ", "a", " ", 
+   SuperscriptBox["k", "2"], " ", "\[Pi]", " ", 
+   RowBox[{"Integrate", "[", 
+    RowBox[{
+     FractionBox[
+      SuperscriptBox[
+       RowBox[{"Sin", "[", 
+        FractionBox[
+         RowBox[{"a", " ", "p"}], 
+         RowBox[{"2", " ", "h"}]], "]"}], "2"], 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox[
+          SuperscriptBox["p", "2"], 
+          SuperscriptBox["h", "2"]], "-", 
+         RowBox[{"4", " ", 
+          SuperscriptBox["k", "2"], " ", 
+          SuperscriptBox["\[Pi]", "2"]}]}], ")"}], "2"]], ",", 
+     RowBox[{"{", 
+      RowBox[{"p", ",", 
+       RowBox[{"-", "\[Infinity]"}], ",", "\[Infinity]"}], "}"}], ",", 
+     RowBox[{"Assumptions", "\[Rule]", 
+      RowBox[{
+       RowBox[{"k", "\[Element]", 
+        TemplateBox[{},
+         "Integers"]}], "&&", 
+       RowBox[{"a", ">", "0"}], "&&", 
+       RowBox[{"h", ">", "0"}], "&&", 
+       RowBox[{"k", ">", "0"}]}]}]}], "]"}]}], "h"]], "Output",
+ CellChangeTimes->{3.983805397070286*^9},
+ CellLabel->"Out[12]=",ExpressionUUID->"3fc46779-6ded-4b48-83ac-dac431a21b60"]
+}, Open  ]]
+},
+WindowSize->{1428, 729.75},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"14.3 for Microsoft Windows (64-bit) (July 8, 2025)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"a441c38c-0ce9-bf40-b34e-1126a386b353"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 3595, 102, 199, "Input",ExpressionUUID->"3f0e5b3d-f088-4b44-b8b6-807b1466500f"],
+Cell[4174, 126, 972, 19, 59, "Message",ExpressionUUID->"543679ed-0811-0048-9f70-98a1dafbae69"],
+Cell[5149, 147, 974, 19, 59, "Message",ExpressionUUID->"8e89cfba-ba67-d246-8bbd-fc1c7b336e08"],
+Cell[6126, 168, 1093, 32, 78, "Output",ExpressionUUID->"6948322e-2151-0d42-a804-b89f05714e54"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7256, 205, 4994, 151, 290, "Input",ExpressionUUID->"acf6dd97-2d33-f74d-9745-99d21c61d6c9"],
+Cell[12253, 358, 974, 19, 59, "Message",ExpressionUUID->"92dcef51-e310-de40-898b-ea8ca9136c80"],
+Cell[13230, 379, 1093, 32, 78, "Output",ExpressionUUID->"7b9dd2a1-faec-de44-8071-8f5de611d5c3"],
+Cell[14326, 413, 975, 19, 59, "Message",ExpressionUUID->"7a891926-28f1-914b-a274-5b02719483f4"],
+Cell[15304, 434, 902, 27, 53, "Output",ExpressionUUID->"7d0b1f78-2bc2-1446-b99c-a2d0f1b61b0a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16243, 466, 1143, 33, 75, "Input",ExpressionUUID->"7f8ccbba-9524-c54e-bfa6-b166c91bb0ed"],
+Cell[17389, 501, 977, 19, 59, "Message",ExpressionUUID->"6690a55b-a299-8c4d-95c9-bfa3b664a50c"],
+Cell[18369, 522, 1144, 33, 97, "Output",ExpressionUUID->"3fc46779-6ded-4b48-83ac-dac431a21b60"]
+}, Open  ]]
+}
+]
+*)
+
