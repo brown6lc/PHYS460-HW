@@ -1,0 +1,185 @@
+Notebook[{Cell[
+BoxData[""],"Input",ExpressionUUID -> "53052876-57b6-43b4-aff2-48ec312fc608"],Cell[
+BoxData[
+RowBox[{RowBox[{RowBox[{"l"," ","="," ","3"}],";"}]," "}]],"Input",ExpressionUUID -> "61cbfe67-7d22-4a4f-a778-14ba9367122b"],Cell[
+BoxData[
+RowBox[{RowBox[{"integrand"," ","="," ",RowBox[{RowBox[{"Lplus","[",RowBox[{"SphericalHarmonicY","[",RowBox[
+{"l",","," ","l",","," ","\[Theta]",","," ","\[CurlyPhi]"}],"]"}],"]"}]," ","*"," ","\n","            ",RowBox[
+{"Sin","[","\[Theta]","]"}]}]}],";"}]],"Input",ExpressionUUID -> "84e9deeb-70b1-40fa-a8f9-c3c3df52322f"],Cell[
+BoxData[
+RowBox[{"Integrate","[",RowBox[{"integrand",","," ",RowBox[{"{",RowBox[{"\[Theta]",","," ","0",","," ","\[Pi]"}],"}"}],","," ",RowBox[
+{"{",RowBox[{"\[CurlyPhi]",","," ","0",","," ",RowBox[{"2","\[Pi]"}]}],"}"}]}],"]"}]],
+"Input",CellLabel -> "In[1]:= ",ExpressionUUID -> "20966b39-aea4-4342-913d-5b37984a848c"],Cell[
+BoxData[
+""],"Input",ExpressionUUID -> "13265511-9e9c-422e-a97c-7a69d5dc4319"],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"Do","[","\n","  ",RowBox[{RowBox[{"integrand"," ","="," ",RowBox[
+{RowBox[{"Sin","[","\[Theta]","]"}],"^",RowBox[{"(",RowBox[{RowBox[{"2","l"}],"+","1"}],")"}]}]}],";","\n","  ",RowBox[
+{"result"," ","="," ",RowBox[{"2"," ","Pi"," ","*"," ",RowBox[{RowBox[{"A","[","l","]"}],"^","2"}]," ","*"," ",RowBox[
+{"Integrate","[",RowBox[{"integrand",","," ",RowBox[{"{",RowBox[{"\[Theta]",","," ","0",","," ","Pi"}],"}"}]}],"]"}]}]}],";","\n","  ",RowBox[
+{"Print","[",RowBox[{"\"l = \"",","," ","l",","," ","\":  integral = \"",","," ",RowBox[
+{"FullSimplify","[","result","]"}],"\n",","," ",RowBox[{"{",RowBox[{"l",","," ","0",","," ","5"}],"}"}]}],"]"}]}]}]],
+"Input",ExpressionUUID -> "ce7967dd-287c-4fde-8cf5-28a9b7d10acf"],Cell[
+BoxData[InterpretationBox[
+RowBox[{"\"l = \"","\[InvisibleSpace]","0","\[InvisibleSpace]","\":  integral = \"","\[InvisibleSpace]",RowBox[
+{"4"," ","\[Pi]"," ",SuperscriptBox[RowBox[{"A","[","0","]"}],"2"]}],"\[InvisibleSpace]","\"  (should be 1)\""}],
+SequenceForm["l = ",0,":  integral = ",Times[4,Pi,Power[A[0],2]],"  (should be 1)"],
+Editable -> False],StandardForm],"Print",ExpressionUUID -> "16b7d63a-0249-4239-974e-d20bd2245e3b"],Cell[
+BoxData[
+InterpretationBox[RowBox[{"\"l = \"","\[InvisibleSpace]","1","\[InvisibleSpace]","\":  integral = \"","\[InvisibleSpace]",RowBox[
+{FractionBox["8","3"]," ","\[Pi]"," ",SuperscriptBox[RowBox[{"A","[","1","]"}],"2"]}],"\[InvisibleSpace]","\"  (should be 1)\""}],
+SequenceForm["l = ",1,":  integral = ",Times[Rational[8,3],Pi,Power[A[1],2]],"  (should be 1)"],
+Editable -> False],StandardForm],"Print",ExpressionUUID -> "c983218e-1e82-4fc0-8dc6-de42a994267e"],Cell[
+BoxData[
+InterpretationBox[RowBox[{"\"l = \"","\[InvisibleSpace]","2","\[InvisibleSpace]","\":  integral = \"","\[InvisibleSpace]",RowBox[
+{FractionBox["32","15"]," ","\[Pi]"," ",SuperscriptBox[RowBox[{"A","[","2","]"}],
+"2"]}],"\[InvisibleSpace]","\"  (should be 1)\""}],SequenceForm["l = ",2,":  integral = ",
+Times[Rational[32,15],Pi,Power[A[2],2]],"  (should be 1)"],Editable -> False],StandardForm],
+"Print",ExpressionUUID -> "d24e65ad-bcdb-4afb-a28a-3671494901a1"],Cell[
+BoxData[InterpretationBox[
+RowBox[{"\"l = \"","\[InvisibleSpace]","3","\[InvisibleSpace]","\":  integral = \"","\[InvisibleSpace]",RowBox[
+{FractionBox["64","35"]," ","\[Pi]"," ",SuperscriptBox[RowBox[{"A","[","3","]"}],
+"2"]}],"\[InvisibleSpace]","\"  (should be 1)\""}],SequenceForm["l = ",3,":  integral = ",
+Times[Rational[64,35],Pi,Power[A[3],2]],"  (should be 1)"],Editable -> False],StandardForm],
+"Print",ExpressionUUID -> "8c03687e-2750-4352-9737-9d76a856a645"],Cell[
+BoxData[InterpretationBox[
+RowBox[{"\"l = \"","\[InvisibleSpace]","4","\[InvisibleSpace]","\":  integral = \"","\[InvisibleSpace]",RowBox[
+{FractionBox["512","315"]," ","\[Pi]"," ",SuperscriptBox[RowBox[{"A","[","4","]"}],
+"2"]}],"\[InvisibleSpace]","\"  (should be 1)\""}],SequenceForm["l = ",4,":  integral = ",
+Times[Rational[512,315],Pi,Power[A[4],2]],"  (should be 1)"],Editable -> False],StandardForm],
+"Print",ExpressionUUID -> "c1fb78d3-80ba-445f-a04a-676951e1a8e7"],Cell[
+BoxData[InterpretationBox[
+RowBox[{"\"l = \"","\[InvisibleSpace]","5","\[InvisibleSpace]","\":  integral = \"","\[InvisibleSpace]",RowBox[
+{FractionBox["1024","693"]," ","\[Pi]"," ",SuperscriptBox[RowBox[{"A","[","5","]"}],
+"2"]}],"\[InvisibleSpace]","\"  (should be 1)\""}],SequenceForm["l = ",5,":  integral = ",
+Times[Rational[1024,693],Pi,Power[A[5],2]],"  (should be 1)"],Editable -> False],
+StandardForm],"Print",ExpressionUUID -> "9a21ddd8-0ea4-4475-b968-2167c2d4ec03"]},
+Open],ExpressionUUID -> "327c98a2-cfc1-4d78-a77f-1e452c1f7f5d"],Cell[
+BoxData[""],
+"Input",ExpressionUUID -> "a32dd080-fc88-4785-9092-3c25553820f2"],Cell[
+BoxData[RowBox[
+{RowBox[{"A","[","l_","]"}]," ",":="," ",RowBox[{RowBox[{"(",RowBox[{RowBox[{RowBox[
+{"(",RowBox[{"-","1"}],")"}],"^","l"}]," ","/"," ",RowBox[{"(",RowBox[{RowBox[{"2","^","l"}]," ","*"," ",RowBox[
+{"l","!"}]}],")"}]}],")"}]," ","*"," ",RowBox[{"Sqrt","[",RowBox[{RowBox[{RowBox[
+{"(",RowBox[{RowBox[{"2","l"}],"+","1"}],")"}],"!"}]," ","/"," ","Pi"}],"]"}]}]}]],
+"Input",ExpressionUUID -> "72bfb7d2-ff52-48e5-a3bb-b027bedb0c65"],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"\n",RowBox[{"Do","[","\n","  ",RowBox[{RowBox[{"Print","[",RowBox[
+{"\"l = \"",","," ","l",","," ","\":  A = \"",","," ",RowBox[{"A","[","l","]"}]}],"]"}],"\n",","," ",RowBox[
+{"{",RowBox[{"l",","," ","0",","," ","5"}],"}"}]}],"]"}]}]],"Input",ExpressionUUID -> "cbae5630-8335-4f6d-bffe-a65702e65d0e"],Cell[
+BoxData[
+InterpretationBox[RowBox[{"\"l = \"","\[InvisibleSpace]","0","\[InvisibleSpace]","\":  A = \"","\[InvisibleSpace]",RowBox[
+{"A","[","0","]"}]}],SequenceForm["l = ",0,":  A = ",A[0]],Editable -> False],StandardForm],
+"Print",ExpressionUUID -> "1c2dcd79-5b15-4ade-8c34-c6c3ca34dcba"],Cell[
+BoxData[InterpretationBox[
+RowBox[{"\"l = \"","\[InvisibleSpace]","1","\[InvisibleSpace]","\":  A = \"","\[InvisibleSpace]",RowBox[
+{"A","[","1","]"}]}],SequenceForm["l = ",1,":  A = ",A[1]],Editable -> False],StandardForm],
+"Print",ExpressionUUID -> "bb409dc8-4149-495d-82fe-d849d6dcadcf"],Cell[
+BoxData[InterpretationBox[
+RowBox[{"\"l = \"","\[InvisibleSpace]","2","\[InvisibleSpace]","\":  A = \"","\[InvisibleSpace]",RowBox[
+{"A","[","2","]"}]}],SequenceForm["l = ",2,":  A = ",A[2]],Editable -> False],StandardForm],
+"Print",ExpressionUUID -> "f1109d82-a799-4b25-93c6-21ca6afa19bf"],Cell[
+BoxData[InterpretationBox[
+RowBox[{"\"l = \"","\[InvisibleSpace]","3","\[InvisibleSpace]","\":  A = \"","\[InvisibleSpace]",RowBox[
+{"A","[","3","]"}]}],SequenceForm["l = ",3,":  A = ",A[3]],Editable -> False],StandardForm],
+"Print",ExpressionUUID -> "3a6c17fb-d902-4bfe-b90f-1f21cd55d5a0"],Cell[
+BoxData[InterpretationBox[
+RowBox[{"\"l = \"","\[InvisibleSpace]","4","\[InvisibleSpace]","\":  A = \"","\[InvisibleSpace]",RowBox[
+{"A","[","4","]"}]}],SequenceForm["l = ",4,":  A = ",A[4]],Editable -> False],StandardForm],
+"Print",ExpressionUUID -> "97ab9b22-7630-4ae5-bae2-d459676a27c9"],Cell[
+BoxData[InterpretationBox[
+RowBox[{"\"l = \"","\[InvisibleSpace]","5","\[InvisibleSpace]","\":  A = \"","\[InvisibleSpace]",RowBox[
+{"A","[","5","]"}]}],SequenceForm["l = ",5,":  A = ",A[5]],Editable -> False],StandardForm],
+"Print",ExpressionUUID -> "8728f416-e8ae-4b99-bd62-a7574ec4ad51"]},Open],ExpressionUUID -> "78b2b1f9-4998-4d7f-9091-565beec946b1"],Cell[
+BoxData[
+""],"Input",ExpressionUUID -> "839a635c-7fa7-47cf-9f81-68d747671613"],Cell[
+BoxData[
+""],"Input",ExpressionUUID -> "81655ae1-0df2-4314-8d45-5be2481aa348"],Cell[
+BoxData[
+RowBox[{"l"," ","/:"," ",RowBox[{"Factorial","[","l","]"}]," ",":="," ",RowBox[{"Factorial","[","l","]"}]," "," "}]],
+"Input",ExpressionUUID -> "f5c10853-4b26-441e-a241-d0fadc095471"],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"A"," ","="," ",RowBox[{"FullSimplify","[","\n","  ",RowBox[
+{"Sqrt","[",RowBox[{"1"," ","/"," ",RowBox[{"(",RowBox[{"2"," ","Pi"," ","*"," ",RowBox[
+{"Integrate","[",RowBox[{RowBox[{RowBox[{"Sin","[","\[Theta]","]"}],"^",RowBox[{"(",RowBox[
+{RowBox[{"2","l"}],"+","1"}],")"}]}],","," ",RowBox[{"{",RowBox[{"\[Theta]",","," ","0",","," ","Pi"}],"}"}],","," ","\n","             ",RowBox[
+{"Assumptions"," ","->"," ",RowBox[{"l"," ","\[Element]"," ","PositiveIntegers"}]}]}],"]"}]}],")"}]}],"]"}],"\n","]"}]}]],
+"Input",CellLabel -> "In[6]:= ",ExpressionUUID -> "59e975f1-1252-4d64-b390-0e97a9a788af"],Cell[
+BoxData[
+FractionBox[SqrtBox[FractionBox[RowBox[{"Gamma","[",RowBox[{FractionBox["3","2"],"+","l"}],"]"}],
+RowBox[{"Gamma","[",RowBox[{"1","+","l"}],"]"}]]],RowBox[{SqrtBox["2"]," ",SuperscriptBox[
+"\[Pi]",RowBox[{"3","/","4"}]]}]],StandardForm],"Output",CellLabel -> "Out[6]= ",
+ExpressionUUID -> "7a4bd26c-7eff-4700-9e3c-96448c4116ad"]},Open],ExpressionUUID -> "7a9bab24-22aa-4552-b937-d3688aaa67b5"],Cell[
+BoxData[
+""],"Input",ExpressionUUID -> "1acb706c-b6b2-40ee-8241-14d6afdaa2f5"],Cell[
+BoxData[
+""],"Input",ExpressionUUID -> "bf41ce4c-6b32-4650-8b9b-3e6031d15bbf"],Cell[
+CellGroupData[
+{Cell[
+BoxData[""],"Input",ExpressionUUID -> "880fd514-d8af-4496-a19a-b1f7c9695375"],Cell[
+BoxData[
+InterpretationBox[RowBox[{"\"l = \"","\[InvisibleSpace]","0","\[InvisibleSpace]","\":  L+ Y_l^l = \"","\[InvisibleSpace]",RowBox[
+{"Lplus","[",FractionBox["1",RowBox[{"2"," ",SqrtBox["\[Pi]"]}]],"]"}]}],SequenceForm[
+"l = ",0,":  L+ Y_l^l = ",Lplus[Times[Rational[1,2],Power[Pi,Rational[-1,2]]]]],Editable -> False],
+StandardForm],"Print",ExpressionUUID -> "2dcd168a-a3d9-4068-959e-5cf417c99d2a"],Cell[
+BoxData[
+InterpretationBox[RowBox[{"\"l = \"","\[InvisibleSpace]","1","\[InvisibleSpace]","\":  L+ Y_l^l = \"","\[InvisibleSpace]",RowBox[
+{"Lplus","[",RowBox[{RowBox[{"-",FractionBox["1","2"]}]," ",SuperscriptBox["\[ExponentialE]",
+RowBox[{"\[ImaginaryI]"," ","\[CurlyPhi]"}]]," ",SqrtBox[FractionBox["3",RowBox[{"2"," ","\[Pi]"}]]]," ",RowBox[
+{"Sin","[","\[Theta]","]"}]}],"]"}]}],SequenceForm["l = ",1,":  L+ Y_l^l = ",Lplus[
+Times[Rational[-1,2],Power[E,Times[Complex[0,1],\[CurlyPhi]]],Power[Times[Rational[
+3,2],Power[Pi,-1]],Rational[1,2]],Sin[\[Theta]]]]],Editable -> False],StandardForm],
+"Print",ExpressionUUID -> "c2b2c894-5bec-4749-bbc2-660e776b31df"],Cell[
+BoxData[InterpretationBox[
+RowBox[{"\"l = \"","\[InvisibleSpace]","2","\[InvisibleSpace]","\":  L+ Y_l^l = \"","\[InvisibleSpace]",RowBox[
+{"Lplus","[",RowBox[{FractionBox["1","4"]," ",SuperscriptBox["\[ExponentialE]",RowBox[
+{"2"," ","\[ImaginaryI]"," ","\[CurlyPhi]"}]]," ",SqrtBox[FractionBox["15",RowBox[
+{"2"," ","\[Pi]"}]]]," ",SuperscriptBox[RowBox[{"Sin","[","\[Theta]","]"}],"2"]}],"]"}]}],
+SequenceForm["l = ",2,":  L+ Y_l^l = ",Lplus[Times[Rational[1,4],Power[E,Times[Complex[
+0,2],\[CurlyPhi]]],Power[Times[Rational[15,2],Power[Pi,-1]],Rational[1,2]],Power[
+Sin[\[Theta]],2]]]],Editable -> False],StandardForm],"Print",ExpressionUUID -> "72512b63-32b6-4922-b91d-5c116466f686"],Cell[
+BoxData[
+InterpretationBox[RowBox[{"\"l = \"","\[InvisibleSpace]","3","\[InvisibleSpace]","\":  L+ Y_l^l = \"","\[InvisibleSpace]",RowBox[
+{"Lplus","[",RowBox[{RowBox[{"-",FractionBox["1","8"]}]," ",SuperscriptBox["\[ExponentialE]",
+RowBox[{"3"," ","\[ImaginaryI]"," ","\[CurlyPhi]"}]]," ",SqrtBox[FractionBox["35",
+"\[Pi]"]]," ",SuperscriptBox[RowBox[{"Sin","[","\[Theta]","]"}],"3"]}],"]"}]}],SequenceForm[
+"l = ",3,":  L+ Y_l^l = ",Lplus[Times[Rational[-1,8],Power[E,Times[Complex[0,3],\[CurlyPhi]]],
+Power[Times[35,Power[Pi,-1]],Rational[1,2]],Power[Sin[\[Theta]],3]]]],Editable -> False],
+StandardForm],"Print",ExpressionUUID -> "76d4f315-9eb8-4187-afe6-37b041b63155"],Cell[
+BoxData[
+InterpretationBox[RowBox[{"\"l = \"","\[InvisibleSpace]","4","\[InvisibleSpace]","\":  L+ Y_l^l = \"","\[InvisibleSpace]",RowBox[
+{"Lplus","[",RowBox[{FractionBox["3","16"]," ",SuperscriptBox["\[ExponentialE]",RowBox[
+{"4"," ","\[ImaginaryI]"," ","\[CurlyPhi]"}]]," ",SqrtBox[FractionBox["35",RowBox[
+{"2"," ","\[Pi]"}]]]," ",SuperscriptBox[RowBox[{"Sin","[","\[Theta]","]"}],"4"]}],"]"}]}],
+SequenceForm["l = ",4,":  L+ Y_l^l = ",Lplus[Times[Rational[3,16],Power[E,Times[Complex[
+0,4],\[CurlyPhi]]],Power[Times[Rational[35,2],Power[Pi,-1]],Rational[1,2]],Power[
+Sin[\[Theta]],4]]]],Editable -> False],StandardForm],"Print",ExpressionUUID -> "f8a55caf-5d5f-4207-831f-cbe9bae53d98"],Cell[
+BoxData[
+InterpretationBox[RowBox[{"\"l = \"","\[InvisibleSpace]","5","\[InvisibleSpace]","\":  L+ Y_l^l = \"","\[InvisibleSpace]",RowBox[
+{"Lplus","[",RowBox[{RowBox[{"-",FractionBox["3","32"]}]," ",SuperscriptBox["\[ExponentialE]",
+RowBox[{"5"," ","\[ImaginaryI]"," ","\[CurlyPhi]"}]]," ",SqrtBox[FractionBox["77",
+"\[Pi]"]]," ",SuperscriptBox[RowBox[{"Sin","[","\[Theta]","]"}],"5"]}],"]"}]}],SequenceForm[
+"l = ",5,":  L+ Y_l^l = ",Lplus[Times[Rational[-3,32],Power[E,Times[Complex[0,5],
+\[CurlyPhi]]],Power[Times[77,Power[Pi,-1]],Rational[1,2]],Power[Sin[\[Theta]],5]]]],
+Editable -> False],StandardForm],"Print",ExpressionUUID -> "39981b03-aa36-41d9-bd13-0171d3a72650"]},
+Open],ExpressionUUID -> "3a4479aa-e1d6-4986-9f5d-97e07286d430"],Cell[
+BoxData[""],
+"Input",ExpressionUUID -> "3f545cef-377e-40b4-a077-d2cfd259778d"],Cell[
+BoxData[""],
+"Input",ExpressionUUID -> "012185a1-03d6-4918-a1f8-b822803111e8"],Cell[
+BoxData[""],
+"Input",ExpressionUUID -> "0caef325-e21c-4735-96f8-9bce3553a7e2"],Cell[
+BoxData[""],
+"Input",ExpressionUUID -> "150791d1-d81d-4500-ad0b-3ea76bd54561"],Cell[
+BoxData[""],
+"Input",ExpressionUUID -> "71db5d87-98eb-4448-b6eb-1918979acfa9"],Cell[
+BoxData[""],
+"Input",ExpressionUUID -> "62157a85-834c-4476-adb0-cb45e72a7487"],Cell[
+BoxData[""],
+"Input",ExpressionUUID -> "cc88f771-6d32-4905-93ad-d0e801f42870"],Cell[
+BoxData[""],
+"Input",ExpressionUUID -> "d742f55b-c610-4ece-ab0d-0056ed0b4691"]},StyleDefinitions -> "Default.nb",
+FrontEndVersion -> "14.3 for Wolfram Cloud 1.75 (April 10, 2026)"]
